@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+	x:Class="Test1.Window1" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	Title="Test1"
+	Height="1080"
+	Width="1920"
+	x:Name="mainwindow"
+	Loaded="mainwindow_Loaded" xmlns:Controls0="http://sharpdevelop.net" xmlns:Controls1="clr-namespace:System;assembly=mscorlib" xmlns:Controls2="clr-namespace:Hanmac.Controls.Buttons;assembly=Hanmac.Controls.Buttons">
+    <Window.Resources>
+        <Style
+			x:Key="Body_Content_DataGrid_Centering"
+			TargetType="{x:Type DataGridCell}">
+            <Setter
+				Property="VerticalAlignment"
+				Value="Center" />
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <ToolBar
+			Height="80"
+			Width="1920"
+			Foreground="Black"
+			Margin="-4,0"
+			VerticalAlignment="Top"
+			HorizontalAlignment="Center"
+			Grid.Row="0"
+			Grid.Column="0"
+			Background="DimGray">
+            <TextBlock
+				RenderTransformOrigin="-0.3403,-6.3422"
+				FontFamily="Arial"
+				TextAlignment="Center"
+				Height="22"
+				Width="100"
+				Foreground="White"
+				ContextMenuService.ShowOnDisabled="True"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				Margin="120,40,0,0"
+				FontSize="13"
+				x:Name="Bname">
+				<Run
+					Text=":  거마장헌교" />
+            </TextBlock>
+            <Button
+				x:Name="menubutton1"
+				Click="button1_Click"
+				Height="33"
+				Width="75"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				Margin="50,30,0,0"
+				Content="설계조건"
+				BorderBrush="Black"
+				Background="Gold"
+				Foreground="Black"
+				FontWeight="Bold"
+				FontSize="13" />
+            <Button
+				x:Name="menubutton2"
+				Click="button1_Click"
+				Height="33"
+				Width="75"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				BorderBrush="Black"
+				Margin="0,30,0,0"
+				Content="표준횡단"
+				Foreground="White"
+				Background="{x:Null}"
+				RenderTransformOrigin="0.5,0.5"
+				FontSize="13" />
+            <TextBlock
+				RenderTransformOrigin="-0.3403,-6.3422"
+				FontSize="16"
+				FontFamily="Arial"
+				TextAlignment="Center"
+				Height="22"
+				Foreground="White"
+				ContextMenuService.ShowOnDisabled="True"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				Width="20"
+				FontWeight="Bold"
+				x:Name="flow1"
+				Margin="5,40,0,0">
+				<Run
+					Text="&gt;" />
+            </TextBlock>
+            <Button
+				x:Name="menubutton3"
+				Click="button1_Click"
+				Height="33"
+				Width="75"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				BorderBrush="Black"
+				Background="{x:Null}"
+				RenderTransformOrigin="0.5,0.5"
+				Margin="5,30,0,0"
+				Foreground="LightGray"
+				Content="종평계획"
+				FontSize="13" />
+            <Button
+				x:Name="menubutton4"
+				Click="button1_Click"
+				Height="33"
+				Width="75"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				BorderBrush="Black"
+				Background="{x:Null}"
+				RenderTransformOrigin="0.5,0.5"
+				Foreground="LightGray"
+				FontSize="13"
+				Content="모델링"
+				Margin="0,30,0,0" />
+            <TextBlock
+				RenderTransformOrigin="-0.3403,-6.3422"
+				FontSize="16"
+				FontFamily="Arial"
+				TextAlignment="Center"
+				Height="22"
+				Foreground="White"
+				ContextMenuService.ShowOnDisabled="True"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				Width="20"
+				FontWeight="Bold"
+				x:Name="flow2"
+				Margin="5,40,0,0">
+				<Run
+					Text="&gt;" />
+            </TextBlock>
+            <Button
+				x:Name="menubutton5"
+				Click="button1_Click"
+				Height="33"
+				Width="75"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				BorderBrush="Black"
+				Background="{x:Null}"
+				RenderTransformOrigin="0.5,0.5"
+				Margin="5,30,0,0"
+				Foreground="LightGray"
+				FontSize="13"
+				Content="독립구조체" />
+            <Button
+				x:Name="menubutton6"
+				Click="button1_Click"
+				Height="33"
+				Width="75"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				BorderBrush="Black"
+				Background="{x:Null}"
+				RenderTransformOrigin="0.5,0.5"
+				Foreground="LightGray"
+				FontSize="13"
+				Margin="0,30,0,0"
+				Content="구조계형성" />
+            <TextBlock
+				RenderTransformOrigin="-0.3403,-6.3422"
+				FontSize="16"
+				FontFamily="Arial"
+				TextAlignment="Center"
+				Height="22"
+				Foreground="White"
+				ContextMenuService.ShowOnDisabled="True"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				Width="20"
+				FontWeight="Bold"
+				x:Name="flow3"
+				Margin="5,40,0,0">
+				<Run
+					Text="&gt;" />
+            </TextBlock>
+            <Button
+				x:Name="menubutton7"
+				Click="button1_Click"
+				Height="33"
+				Width="75"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				BorderBrush="Black"
+				Background="{x:Null}"
+				RenderTransformOrigin="0.5,0.5"
+				Margin="5,30,0,0"
+				Foreground="LightGray"
+				FontSize="13"
+				Content="직접하중" />
+            <Button
+				x:Name="menubutton8"
+				Click="button1_Click"
+				Height="33"
+				Width="75"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				BorderBrush="Black"
+				Background="{x:Null}"
+				RenderTransformOrigin="0.5,0.5"
+				Foreground="LightGray"
+				FontSize="13"
+				Margin="0,30,0,0"
+				Content="간접하중" />
+            <TextBlock
+				RenderTransformOrigin="-0.3403,-6.3422"
+				FontSize="16"
+				FontFamily="Arial"
+				TextAlignment="Center"
+				Height="22"
+				Foreground="White"
+				ContextMenuService.ShowOnDisabled="True"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				Width="20"
+				FontWeight="Bold"
+				x:Name="flow4"
+				Margin="5,40,0,0">
+				<Run
+					Text="&gt;" />
+            </TextBlock>
+            <Button
+				x:Name="menubutton9"
+				Click="button1_Click"
+				Height="33"
+				Width="75"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				BorderBrush="Black"
+				Background="{x:Null}"
+				RenderTransformOrigin="0.5,0.5"
+				Margin="5,30,0,0"
+				Foreground="LightGray"
+				FontSize="13"
+				Content="절점선정" />
+            <Button
+				x:Name="menubutton10"
+				Click="button1_Click"
+				Height="33"
+				Width="75"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				BorderBrush="Black"
+				Background="{x:Null}"
+				RenderTransformOrigin="0.5,0.5"
+				Foreground="LightGray"
+				FontSize="13"
+				Margin="0,30,0,0"
+				Content="횡방향위치" />
+            <Button
+				x:Name="menubutton3_Copy7"
+				Click="button1_Click"
+				Height="33"
+				Width="75"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				BorderBrush="Black"
+				Background="{x:Null}"
+				RenderTransformOrigin="0.5,0.5"
+				Foreground="LightGray"
+				FontSize="13"
+				Margin="0,30,0,0"
+				Content="차량재하" />
+            <TextBlock
+				RenderTransformOrigin="-0.3403,-6.3422"
+				FontSize="16"
+				FontFamily="Arial"
+				TextAlignment="Center"
+				Height="22"
+				Foreground="White"
+				ContextMenuService.ShowOnDisabled="True"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				Width="20"
+				FontWeight="Bold"
+				x:Name="flow5"
+				Margin="5,40,0,0">
+				<Run
+					Text="&gt;" />
+            </TextBlock>
+            <Button
+				x:Name="menubutton12"
+				Click="button1_Click"
+				Height="33"
+				Width="75"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				BorderBrush="Black"
+				Background="{x:Null}"
+				RenderTransformOrigin="0.5,0.5"
+				Margin="5,30,0,0"
+				Foreground="LightGray"
+				FontSize="13"
+				Content="하중조합" />
+            <Button
+				x:Name="menubutton13"
+				Click="button1_Click"
+				Height="33"
+				Width="75"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				BorderBrush="Black"
+				Background="{x:Null}"
+				RenderTransformOrigin="0.5,0.5"
+				Foreground="LightGray"
+				FontSize="13"
+				Margin="0,30,0,0"
+				Content="설계부재력" />
+            <TextBlock
+				RenderTransformOrigin="-0.3403,-6.3422"
+				FontSize="16"
+				FontFamily="Arial"
+				TextAlignment="Center"
+				Height="22"
+				Foreground="White"
+				ContextMenuService.ShowOnDisabled="True"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				Width="20"
+				FontWeight="Bold"
+				x:Name="flow6"
+				Margin="5,40,0,0">
+				<Run
+					Text="&gt;" />
+            </TextBlock>
+            <Button
+				x:Name="menubutton14"
+				Click="button1_Click"
+				Height="33"
+				Width="75"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				BorderBrush="Black"
+				Background="{x:Null}"
+				RenderTransformOrigin="0.5,0.5"
+				Margin="5,30,0,0"
+				Foreground="LightGray"
+				FontSize="13"
+				Content="RC설계" />
+            <Button
+				Click="button1_Click"
+				Height="33"
+				Width="75"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				BorderBrush="Black"
+				Background="{x:Null}"
+				RenderTransformOrigin="0.5,0.5"
+				Foreground="LightGray"
+				FontSize="13"
+				Margin="0,30,0,0"
+				Content="PSC설계"
+				x:Name="menubutton15" />
+            <Button
+				x:Name="menubutton16"
+				Click="button1_Click"
+				Height="33"
+				Width="75"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				BorderBrush="Black"
+				Background="{x:Null}"
+				RenderTransformOrigin="0.5,0.5"
+				Foreground="LightGray"
+				FontSize="13"
+				Margin="0,30,0,0"
+				Content="구조계산서" />
+            <TextBlock
+				RenderTransformOrigin="-0.3403,-6.3422"
+				FontFamily="Arial"
+				ContextMenuService.ShowOnDisabled="True"
+				Height="22"
+				Foreground="Gold"
+				FontWeight="Bold"
+				FontSize="11"
+				Width="70"
+				x:Name="menugroup1"
+				VerticalAlignment="Top"
+				HorizontalAlignment="Left"
+				TextAlignment="Left"
+				Margin="-1380,7,0,0">
+				<Run
+					Text="설계기준" />
+            </TextBlock>
+            <TextBlock
+				RenderTransformOrigin="-0.3403,-6.3422"
+				FontFamily="Arial"
+				ContextMenuService.ShowOnDisabled="True"
+				HorizontalAlignment="Left"
+				Height="22"
+				FontSize="11"
+				x:Name="menugroup2"
+				Foreground="White"
+				FontWeight="Normal"
+				Width="70"
+				TextAlignment="Left"
+				VerticalAlignment="Top"
+				Margin="-1200,7,0,0">
+				<Run
+					Text="구조물계획" />
+            </TextBlock>
+            <TextBlock
+				RenderTransformOrigin="-0.3403,-6.3422"
+				FontFamily="Arial"
+				ContextMenuService.ShowOnDisabled="True"
+				HorizontalAlignment="Left"
+				Height="22"
+				FontSize="11"
+				VerticalAlignment="Top"
+				x:Name="menugroup3"
+				Foreground="White"
+				FontWeight="Normal"
+				Width="70"
+				TextAlignment="Left"
+				Margin="-1020,7,0,0">
+				<Run
+					Text="시공단계" />
+            </TextBlock>
+            <TextBlock
+				RenderTransformOrigin="-0.3403,-6.3422"
+				FontFamily="Arial"
+				ContextMenuService.ShowOnDisabled="True"
+				HorizontalAlignment="Left"
+				Height="22"
+				FontSize="11"
+				VerticalAlignment="Top"
+				x:Name="menugroup4"
+				Foreground="White"
+				FontWeight="Normal"
+				Width="70"
+				TextAlignment="Left"
+				Margin="-840,7,0,0">
+				<Run
+					Text="일반하중" />
+            </TextBlock>
+            <TextBlock
+				RenderTransformOrigin="-0.3403,-6.3422"
+				FontFamily="Arial"
+				ContextMenuService.ShowOnDisabled="True"
+				HorizontalAlignment="Left"
+				Height="22"
+				FontSize="11"
+				VerticalAlignment="Top"
+				x:Name="menugroup5"
+				Foreground="White"
+				FontWeight="Normal"
+				Width="70"
+				TextAlignment="Left"
+				Margin="-660,7,0,0">
+				<Run
+					Text="활하중" />
+            </TextBlock>
+            <TextBlock
+				RenderTransformOrigin="-0.3403,-6.3422"
+				FontFamily="Arial"
+				ContextMenuService.ShowOnDisabled="True"
+				HorizontalAlignment="Left"
+				Height="22"
+				FontSize="11"
+				VerticalAlignment="Top"
+				x:Name="menugroup6"
+				Foreground="White"
+				FontWeight="Normal"
+				Width="70"
+				TextAlignment="Left"
+				Margin="-405,7,0,0">
+				<Run
+					Text="부재력산정" />
+            </TextBlock>
+            <TextBlock
+				RenderTransformOrigin="-0.3403,-6.3422"
+				FontFamily="Arial"
+				ContextMenuService.ShowOnDisabled="True"
+				HorizontalAlignment="Left"
+				Height="22"
+				FontSize="11"
+				VerticalAlignment="Top"
+				Foreground="White"
+				FontWeight="Normal"
+				Width="70"
+				TextAlignment="Left"
+				Margin="-225,7,0,0"
+				x:Name="menugroup7">
+				<Run
+					Text="상세설계" />
+            </TextBlock>
+        </ToolBar>
+        <StackPanel
+			Width="521"
+			Background="Beige"
+			Margin="124,122,0,0"
+			VerticalAlignment="Top"
+			HorizontalAlignment="Left"
+			Grid.Row="0"
+			Grid.Column="0"
+			Height="598"
+			Grid.RowSpan="3">
+            <TextBlock
+				HorizontalAlignment="Left"
+				Foreground="CornflowerBlue"
+				TextAlignment="Left"
+				Width="160"
+				VerticalAlignment="Center"
+				Margin="15,10,0,0"
+				Height="25"
+				FontStyle="Normal"
+				FontWeight="Bold"
+				FontSize="14">
+				<Run
+					Text="사업개요 및 도로조건" />
+            </TextBlock>
+            <DataGrid
+				x:Name="datagrid1"
+				SelectionChanged="dataGrid1_SelectionChanged"
+				ItemsSource="{Binding}"
+				AutoGenerateColumns="False"
+				RowHeight="25"
+				Height="150"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				HeadersVisibility="None"
+				AreRowDetailsFrozen="False"
+				Width="500"
+				HorizontalScrollBarVisibility="Disabled"
+				VerticalScrollBarVisibility="Disabled"
+				Margin="10,5,0,0"
+				FontSize="11">
+                <DataGrid.Columns>
+                    <DataGridTextColumn
+						Header="Header1 Text"
+						Binding="{Binding Header1}"
+						Width="73">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style
+								TargetType="TextBlock">
+                                <Setter
+									Property="HorizontalAlignment"
+									Value="Center" />
+                                <Setter
+									Property="VerticalAlignment"
+									Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+						Header="Header2 Text"
+						Binding="{Binding Header2}"
+						Width="207">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style
+								TargetType="TextBlock">
+                                <Setter
+									Property="VerticalAlignment"
+									Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+						Header="Header3 Text"
+						Binding="{Binding Header3}"
+						Width="73">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style
+								TargetType="TextBlock">
+                                <Setter
+									Property="HorizontalAlignment"
+									Value="Center" />
+                                <Setter
+									Property="VerticalAlignment"
+									Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+						Header="Header4 Text"
+						Binding="{Binding Header4}"
+						Width="147">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style
+								TargetType="TextBlock">
+                                <Setter
+									Property="VerticalAlignment"
+									Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <TextBlock
+				HorizontalAlignment="Left"
+				Foreground="CornflowerBlue"
+				TextAlignment="Left"
+				Width="160"
+				VerticalAlignment="Center"
+				Height="25"
+				FontStyle="Normal"
+				FontWeight="Bold"
+				Margin="15,30,0,0"
+				FontSize="14">
+				<Run
+					Text="교량등급" />
+            </TextBlock>
+            <DataGrid
+				x:Name="datagrid2"
+				SelectionChanged="dataGrid2_SelectionChanged"
+				ItemsSource="{Binding}"
+				AutoGenerateColumns="False"
+				RowHeight="25"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				AreRowDetailsFrozen="False"
+				Width="500"
+				HorizontalScrollBarVisibility="Disabled"
+				VerticalScrollBarVisibility="Disabled"
+				Margin="10,5,0,0"
+				Height="250"
+				HeadersVisibility="None"
+				FontSize="11">
+                <DataGrid.Columns>
+                    <DataGridCheckBoxColumn
+						Header=""
+						Binding="{Binding Header1}"
+						Width="50" />
+                    <DataGridTextColumn
+						Header=""
+						Binding="{Binding Header2}"
+						Width="380">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style
+								TargetType="TextBlock">
+                                <Setter
+									Property="HorizontalAlignment"
+									Value="Center" />
+                                <Setter
+									Property="VerticalAlignment"
+									Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn
+						Header="등 급"
+						Binding="{Binding Header3}"
+						Width="70">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style
+								TargetType="TextBlock">
+                                <Setter
+									Property="HorizontalAlignment"
+									Value="Center" />
+                                <Setter
+									Property="VerticalAlignment"
+									Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+        <DataGrid
+			Width="433"
+			Height="238"
+			x:Name="datagrid8"
+			ItemsSource="{Binding}"
+			AutoGenerateColumns="False"
+			RowHeight="30"
+			ColumnHeaderHeight="31"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
+			VerticalAlignment="Bottom"
+			Margin="810,-451,0,503"
+			Grid.Column="0">
+            <DataGrid.Columns>
+                <DataGridTextColumn
+					Header="Header1 Text"
+					Binding="{Binding Header2}"
+					Width="100" />
+                <DataGridTextColumn
+					Header="Header2 Text"
+					Binding="{Binding Header1}"
+					Width="100" />
+                <DataGridCheckBoxColumn
+					Header="Header3 Text"
+					Binding="{Binding Header3}"
+					Width="100" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Canvas
+			x:Name="groupicon1"
+			Height="42"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Stretch"
+			VerticalAlignment="Top"
+			Margin="59,122,1797,0"
+			Width="56">
+            <Canvas.Background>
+                <ImageBrush
+					ImageSource="C:\Users\SHI\Documents\SharpDevelop Projects\Test1\Test1\image\사업개요아이콘.jpg" />
+            </Canvas.Background>
+        </Canvas>
+        <TextBox
+			Height="243"
+			Grid.Column="0"
+			Grid.Row="0"
+			x:Name="groupname1"
+			BorderBrush="{x:Null}"
+			FontSize="15"
+			FontWeight="Bold"
+			Foreground="DarkKhaki"
+			HorizontalAlignment="Left"
+			HorizontalContentAlignment="Left"
+			TextAlignment="Center"
+			VerticalAlignment="Top"
+			VerticalContentAlignment="Top"
+			TextWrapping="Wrap"
+			Width="38"
+			Text="도로  및  위치  조건"
+			Margin="75,170,0,0"
+			Background="White" Grid.RowSpan="2" />
+        <Button
+			Content=""
+			x:Name="minbutton"
+			BorderBrush="DimGray"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Right"
+			VerticalAlignment="Top"
+			Height="20"
+			Width="20"
+			Margin="0,0,48,0">
+            <Button.Background>
+                <ImageBrush
+					ImageSource="file:///C:/Users/SHI/Documents/SharpDevelop Projects/Test1/Test1/image/최소화.jpg" />
+            </Button.Background>
+        </Button>
+        <Button
+			Content=""
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Right"
+			VerticalAlignment="Top"
+			x:Name="maxbutton"
+			BorderBrush="DimGray"
+			Height="20"
+			Width="20"
+			Margin="0,0,28,0">
+            <Button.Background>
+                <ImageBrush
+					ImageSource="file:///C:/Users/SHI/Documents/SharpDevelop Projects/Test1/Test1/image/축소.jpg" />
+            </Button.Background>
+        </Button>
+        <Button
+			Content=""
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Right"
+			VerticalAlignment="Top"
+			x:Name="endbutton"
+			BorderBrush="DimGray"
+			Margin="0,0,8,0"
+			Height="20"
+			Width="20"
+			RenderTransformOrigin="0.5,0.4089">
+            <Button.Background>
+                <ImageBrush
+					ImageSource="file:///C:/Users/SHI/Documents/SharpDevelop Projects/Test1/Test1/image/종료.jpg" />
+            </Button.Background>
+        </Button>
+        <Button
+			Content=""
+			x:Name="logobutton"
+			BorderBrush="DimGray"
+			Height="76"
+			Width="134"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Right"
+			VerticalAlignment="Top"
+			Margin="0,0,1778,0">
+            <Button.Background>
+                <ImageBrush
+					ImageSource="file:///C:/Users/SHI/Documents/SharpDevelop Projects/Test1/Test1/image/Brizainer.png" />
+            </Button.Background>
+        </Button>
+        <Grid.RowDefinitions>
+            <RowDefinition
+				Height="145*" />
+            <RowDefinition Height="76*"/>
+            <RowDefinition
+				Height="304*" />
+        </Grid.RowDefinitions>
+    </Grid>
+</Window>
